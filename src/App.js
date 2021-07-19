@@ -1,9 +1,12 @@
+import PageHeader from './components/PageHeader'
+import TimeCard from './components/TimeCard';
 
 function App() {
   return (
-    <div className="App">
-      <h1>cronometer</h1>
-    </div>
+    <>
+      <PageHeader />
+      <TimeCard />
+    </>
   );
 }
 
