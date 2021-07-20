@@ -1,10 +1,14 @@
 import React from "react";
 import { Button, Container, Icon } from "semantic-ui-react";
 
-const AddTimerButton = () => {
+const style = {
+    marginTop: '10px'
+}
+
+const AddTimerButton = ({setShowUpdateCard}) => {
   return (
-    <Container textAlign='center'>
-      <Button compact basic>
+    <Container textAlign='center' style={style}>
+      <Button compact basic onClick={() => setShowUpdateCard(true)}>
         <Icon name="plus" />
       </Button>
     </Container>
