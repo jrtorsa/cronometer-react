@@ -1,3 +1,4 @@
+import AddTimerButton from './components/AddTimerButton';
 import EditCard from './components/EditCard';
 import PageHeader from './components/PageHeader'
 import TimeCard from './components/TimeCard';
@@ -9,6 +10,7 @@ function App() {
       <PageHeader />
       <TimeCard />
       <EditCard/>
+      <AddTimerButton />
     </>
   );
 }
