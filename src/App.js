@@ -7,7 +7,7 @@ import TimeCard from "./components/TimeCard";
 function App() {
   const [showUpdateCard, setShowUpdateCard] = useState(false);
   const [showTimerCard, setShowTimerCard] = useState(true);
-  const [newTimer, setNewTimer] = useState([])
+  const [newTimer, setNewTimer] = useState([{title: '', project: ''}])
 
   const toggleCards = () => {
     if (!showTimerCard) {
@@ -19,12 +19,22 @@ function App() {
     }
   };
 
+  const handleChange = e => {
+    const { name, value } = e.target
+    setNewTimer(
+      {[name]: value}
+    )
+  }
+
+  const createNewTimer = () => {
+
+  }
   
   return (
     <>
       <PageHeader />
       <TimeCard showTimerCard={showTimerCard} toggleCards={toggleCards} newTimer={newTimer} />
-      <EditCard showUpdateCard={showUpdateCard} toggleCards={toggleCards} />
+      <EditCard showUpdateCard={showUpdateCard} toggleCards={toggleCards} handleChange={handleChange} newTimer={newTimer} />
       <AddTimerButton setShowUpdateCard={setShowUpdateCard} />
     </>
   );
