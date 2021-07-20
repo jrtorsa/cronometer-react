@@ -5,10 +5,10 @@ const style = {
     marginTop: '10px'
 }
 
-const AddTimerButton = ({setShowUpdateCard}) => {
+const AddTimerButton = ({setShow}) => {
   return (
     <Container textAlign='center' style={style}>
-      <Button compact basic onClick={() => setShowUpdateCard(true)}>
+      <Button compact basic onClick={() => setShow(true)}>
         <Icon name="plus" />
       </Button>
     </Container>

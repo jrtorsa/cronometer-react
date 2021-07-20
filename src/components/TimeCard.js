@@ -1,10 +1,10 @@
 import React from "react";
 import { Button, Card } from "semantic-ui-react";
 
-const TimeCard = ({ showTimerCard, toggleCards }) => {
+const TimeCard = ({ show, setShow }) => {
   return (
     <>
-      {showTimerCard ? (
+      {show ? (
         <Card.Group>
           <Card centered>
             <Card.Content>
@@ -18,7 +18,7 @@ const TimeCard = ({ showTimerCard, toggleCards }) => {
               <Button.Group
                 buttons={[
                   { key: "align right", icon: "trash", basic: "true" },
-                  { key: "align right", icon: "edit", basic: "true", onClick: () => toggleCards() },
+                  { key: "align right", icon: "edit", basic: "true", onClick: () => setShow(false) },
                 ]}
               />
             </Card.Content>

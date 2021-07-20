@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Card, Form } from "semantic-ui-react";
 
-const EditCard = ({ showUpdateCard, toggleCards, handleChange, newTimer }) => {
+const EditCard = ({ show, setShow, handleChange, newTimer }) => {
 
     const { title, project } = newTimer
-    
+
   return (
     <>
-      {showUpdateCard ? (
+      {show ? (
+        ""
+      ) : (
         <Card centered>
           <Card.Content>
             <Form>
@@ -30,15 +32,13 @@ const EditCard = ({ showUpdateCard, toggleCards, handleChange, newTimer }) => {
                 floated="right"
                 basic
                 negative
-                onClick={() => toggleCards()}
+                onClick={() => setShow(true)}
               >
                 Cancel
               </Button>
             </Button.Group>
           </Card.Content>
         </Card>
-      ) : (
-        ""
       )}
     </>
   );
