@@ -3,7 +3,8 @@ import { Button, Card } from "semantic-ui-react";
 
 const TimeCard = () => {
   return (
-    <Card centered>
+    <Card.Group>
+        <Card centered>
       <Card.Content>
         <Card.Header>Crear Nuevos Proyectos</Card.Header>
         <Card.Meta>Make it Real</Card.Meta>
@@ -14,13 +15,14 @@ const TimeCard = () => {
       <Card.Content textAlign="right">
         <Button.Group
             buttons={[
-                {key: 'align right', icon: 'trash'},
-                {key: 'align right', icon: 'edit'}
+                {key: 'align right', icon: 'trash', basic: 'true'},
+                {key: 'align right', icon: 'edit', basic: 'true'}
             ]}
        />
       </Card.Content>
-      <Button positive>Start</Button>
+      <Button basic positive>Start</Button>
     </Card>
+    </Card.Group>
   );
 };
 
