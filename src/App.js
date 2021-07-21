@@ -1,30 +1,34 @@
 import { useState } from "react";
 import AddTimerButton from "./components/AddTimerButton";
-import EditCard from "./components/EditCard";
+import CreateCard from "./components/CreateCard";
 import PageHeader from "./components/PageHeader";
 import TimeCard from "./components/TimeCard";
 
 function App() {
-  const [show, setShow] = useState(true)
-  const [newTimer, setNewTimer] = useState([{title: '', project: ''}])
+  const [cronometerList, setCronometerList] = useState([]);
+  const [cronometerCounter, setCronometerCounter] = useState(0)
+  const [show, setShow] = useState(false)
 
-  const handleChange = e => {
-    const { name, value } = e.target
-    setNewTimer(
-      {[name]: value}
-    )
-  }
+  const newCronometer = (cronometer) => {
+    setCronometerList([...cronometerList, cronometer]);
+  };
 
-  const createNewTimer = () => {
-
+  const showElement = () => {
+    setShow(!show)
   }
   
+  const addCronometerCounter = () => {
+    setCronometerList(cronometerCounter + 1)
+  }
+
   return (
     <>
       <PageHeader />
-      <TimeCard show={show} setShow={setShow} newTimer={newTimer} />
-      <EditCard show={show} setShow={setShow} handleChange={handleChange} newTimer={newTimer} />
-      <AddTimerButton setShow={setShow} />
+      <div style={{ marginBottom: "30px" }}>
+        <TimeCard showElement={showElement} cronometerList={cronometerList} />
+      </div>
+      <CreateCard show={show} showElement={showElement} newCronometer={newCronometer} cronometerList={cronometerList} />
+      <AddTimerButton addCronometerCounter={addCronometerCounter} />
     </>
   );
 }

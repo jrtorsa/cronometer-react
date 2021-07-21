@@ -5,10 +5,10 @@ const style = {
     marginTop: '10px'
 }
 
-const AddTimerButton = ({setShow}) => {
+const AddTimerButton = ({addCronometerCounter}) => {
   return (
     <Container textAlign='center' style={style}>
-      <Button compact basic onClick={() => setShow(true)}>
+      <Button compact basic onClick={() => addCronometerCounter()}>
         <Icon name="plus" />
       </Button>
     </Container>
