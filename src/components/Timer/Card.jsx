@@ -15,8 +15,8 @@ const Card = () => {
           <button className="edit">
             <i class="far fa-edit"></i>
           </button>
-          <button className="start-stop">Start</button>
         </div>
+        <button className="start-stop">Start</button>
       </div>
     </div>
   );

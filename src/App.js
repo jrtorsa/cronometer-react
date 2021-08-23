@@ -1,4 +1,5 @@
-import Card from './components/Card';
+import Card from './components/Timer/Card';
+import Create from './components/Create/Create';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <h1 style={{ textAlign: 'center' }}>Cronomentros</h1>
       <hr />
       <Card />
+      <Create />
     </div>
   );
 }
