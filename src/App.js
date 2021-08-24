@@ -1,5 +1,6 @@
 import Card from './components/Timer/Card';
 import Create from './components/Create/Create';
+import AddTimer from './components/AddTimer/AddTimer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <hr />
       <Card />
       <Create />
+      <AddTimer />
     </div>
   );
 }
