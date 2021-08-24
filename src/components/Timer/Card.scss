@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .card-container {
+    border: 1px solid rgb(100, 96, 96);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+    padding: 5px;
+    color: rgb(160, 148, 148);
+  }
+
+  .timer {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .buttons > * {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  button.start-stop {
+    border: 1px solid green;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    color: green;
+    &:hover {
+      background-color: green;
+      color: white;
+    }
+  }
+}
