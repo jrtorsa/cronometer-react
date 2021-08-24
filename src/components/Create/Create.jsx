@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './Create.scss';
 
-const Create = () => {
+const Create = (props) => {
+  const [data, setData] = useState([]);
   const [timer, setTimer] = useState({
     title: '',
     project: '',
+    id: 0,
   });
   const [error, setError] = useState(false);
   const [cancelBtn, setCancelBtn] = useState(true);
@@ -25,11 +27,20 @@ const Create = () => {
       return;
     }
     setError(false);
+
+    setData([...data, { ...timer, id: data.length + 1 }]);
+
+    setTimer({
+      title: '',
+      project: '',
+    });
   };
 
   const cancelBtnFn = () => {
     setCancelBtn(false);
   };
+
+  console.log(data);
 
   return cancelBtn ? (
     <div className="create">
